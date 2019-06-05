@@ -1,2 +1,8 @@
+<nav>
+  <a [routerLink]="['']">home</a>
+  <a [routerLink]="['feature1']">feature1</a>
+  <a [routerLink]="['feature2']">feature2</a>
+</nav>
 APP
+Data: {{ globalData$ | async }}
 <router-outlet></router-outlet>
