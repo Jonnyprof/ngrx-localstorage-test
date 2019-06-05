@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { select, Store } from '@ngrx/store';
 
 import * as fromRoot from './store/reducers';
+import { LoadGlobalsSuccess } from 'src/app/store/actions/global.actions';
 
 @Component({
   selector: 'app-root',
@@ -25,5 +26,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.globalSubscription.unsubscribe();
+  }
+
+  loadGlobalData() {
+    this.store.dispatch(new LoadGlobalsSuccess({data: {hello: {world: true}}}));
   }
 }

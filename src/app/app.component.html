@@ -4,5 +4,6 @@
   <a [routerLink]="['feature2']">feature2</a>
 </nav>
 APP
-Data: {{ globalData$ | async }}
+Data: {{ globalData$ | async | json }}
+<button (click)="loadGlobalData()" type="button">Load global data</button>
 <router-outlet></router-outlet>
