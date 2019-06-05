@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 import { select, Store } from '@ngrx/store';
 
 import * as fromRoot from './store/reducers';
-import { LoadGlobalsSuccess } from 'src/app/store/actions/global.actions';
+import { LoadGlobalsSuccess } from './store/actions/global.actions';
 
 @Component({
   selector: 'app-root',
